@@ -24,6 +24,7 @@ Each playbook includes prerequisites, step-by-step instructions, troubleshooting
 | Document | Description |
 |----------|-------------|
 | [🎯 Learning Path](docs/LEARNING-PATH.md) | **Optimal learning order for all 33 playbooks** - 6 progressive levels, specialization tracks, time estimates |
+| [📋 Mi Plan de Aprendizaje](docs/MI-PLAN-APRENDIZAJE.md) | **Personal progress tracker** - Dashboard, checkpoints, weekly goals, learning diary |
 | [📊 Cerebro DS Analysis](docs/CEREBRO-DS-ANALYSIS.md) | Comparison of NVIDIA RAG vs Cerebro DS, compatibility analysis, architectural decisions |
 
 ## 🗺️ Learning Path Overview
@@ -44,7 +45,7 @@ NIVEL 1: Fundamentos       ← Setup, Dashboard, VS Code, Tailscale
 
 **Duración Total**: 40-50 horas | **Tracks**: RAG, MLOps, Creative, Data Science, Robotics
 
-👉 [Ver plan completo](docs/LEARNING-PATH.md)
+👉 [Ver plan completo](docs/LEARNING-PATH.md) | 📋 [Seguimiento personal](docs/MI-PLAN-APRENDIZAJE.md)
 
 ## Playbook Compatibility (Single DGX Spark)
 
