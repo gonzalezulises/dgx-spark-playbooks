@@ -7,7 +7,7 @@
 
 Collection of step-by-step playbooks for setting up AI/ML workloads on NVIDIA DGX Spark devices with Blackwell architecture.
 
-> **Fork Note**: This is a fork of NVIDIA's official DGX Spark playbooks repository. See [Cerebro DS Analysis](docs/CEREBRO-DS-ANALYSIS.md) for custom documentation and integration notes with the Cerebro DS RAG system.
+> **Fork Note**: This is a fork of NVIDIA's official DGX Spark playbooks repository. See custom documentation below for learning paths and integration with Cerebro DS RAG system.
 
 ## About
 
@@ -19,11 +19,32 @@ These playbooks provide detailed instructions for:
 
 Each playbook includes prerequisites, step-by-step instructions, troubleshooting guidance, and example code.
 
-## Custom Documentation
+## 📚 Custom Documentation
 
 | Document | Description |
 |----------|-------------|
-| [Cerebro DS Analysis](docs/CEREBRO-DS-ANALYSIS.md) | Comparison of NVIDIA RAG vs Cerebro DS, playbook compatibility analysis, and architectural decisions |
+| [🎯 Learning Path](docs/LEARNING-PATH.md) | **Optimal learning order for all 33 playbooks** - 6 progressive levels, specialization tracks, time estimates |
+| [📊 Cerebro DS Analysis](docs/CEREBRO-DS-ANALYSIS.md) | Comparison of NVIDIA RAG vs Cerebro DS, compatibility analysis, architectural decisions |
+
+## 🗺️ Learning Path Overview
+
+```
+NIVEL 6: Multi-Node        ← Connect Two Sparks, NCCL, Distributed
+    ↑
+NIVEL 5: Especialización   ← Isaac, FLUX, Multi-modal, Data Science
+    ↑
+NIVEL 4: Fine-Tuning       ← NeMo, Unsloth, LLaMA Factory
+    ↑
+NIVEL 3: RAG & Agentes     ← RAG Workbench, txt2kg, Multi-Agent
+    ↑
+NIVEL 2: Inferencia        ← Ollama, vLLM, TRT-LLM, NIM, SGLang
+    ↑
+NIVEL 1: Fundamentos       ← Setup, Dashboard, VS Code, Tailscale
+```
+
+**Duración Total**: 40-50 horas | **Tracks**: RAG, MLOps, Creative, Data Science, Robotics
+
+👉 [Ver plan completo](docs/LEARNING-PATH.md)
 
 ## Playbook Compatibility (Single DGX Spark)
 
@@ -39,39 +60,60 @@ See [full compatibility analysis](docs/CEREBRO-DS-ANALYSIS.md#análisis-de-compa
 
 ### NVIDIA
 
-- [Comfy UI](nvidia/comfy-ui/)
+#### Level 1: Fundamentals
 - [Set Up Local Network Access](nvidia/connect-to-your-spark/)
-- [Connect Two Sparks](nvidia/connect-two-sparks/) ❌ *Requires 2 Sparks*
-- [CUDA-X Data Science](nvidia/cuda-x-data-science/)
 - [DGX Dashboard](nvidia/dgx-dashboard/)
-- [FLUX.1 Dreambooth LoRA Fine-tuning](nvidia/flux-finetuning/) ⚠️ *Requires HF Token*
-- [Install and Use Isaac Sim and Isaac Lab](nvidia/isaac/)
-- [Optimized JAX](nvidia/jax/)
-- [Live VLM WebUI](nvidia/live-vlm-webui/)
-- [LLaMA Factory](nvidia/llama-factory/) ⚠️ *Requires HF Token*
-- [Build and Deploy a Multi-Agent Chatbot](nvidia/multi-agent-chatbot/) ⚠️ *Requires API Keys*
-- [Multi-modal Inference](nvidia/multi-modal-inference/)
-- [NCCL for Two Sparks](nvidia/nccl/) ❌ *Requires 2 Sparks*
-- [Fine-tune with NeMo](nvidia/nemo-fine-tune/) ⚠️ *Requires HF Token*
-- [Nemotron-3-Nano with llama.cpp](nvidia/nemotron/)
-- [NIM on Spark](nvidia/nim-llm/) ⚠️ *Requires NGC API Key*
-- [NVFP4 Quantization](nvidia/nvfp4-quantization/)
-- [Ollama](nvidia/ollama/)
-- [Open WebUI with Ollama](nvidia/open-webui/)
-- [Portfolio Optimization](nvidia/portfolio-optimization/)
-- [Fine-tune with Pytorch](nvidia/pytorch-fine-tune/) ⚠️ *Requires HF Token*
-- [RAG Application in AI Workbench](nvidia/rag-ai-workbench/) ⚠️ *Requires NGC + Tavily Keys*
-- [SGLang for Inference](nvidia/sglang/) ⚠️ *Requires HF Token*
-- [Single-cell RNA Sequencing](nvidia/single-cell/)
-- [Speculative Decoding](nvidia/speculative-decoding/)
-- [Set up Tailscale on Your Spark](nvidia/tailscale/)
-- [TRT LLM for Inference](nvidia/trt-llm/) ⚠️ *Requires NGC API Key*
-- [Text to Knowledge Graph](nvidia/txt2kg/) ⚠️ *Requires API Keys*
-- [Unsloth on DGX Spark](nvidia/unsloth/) ⚠️ *Requires HF Token*
-- [Vibe Coding in VS Code](nvidia/vibe-coding/)
-- [vLLM for Inference](nvidia/vllm/)
 - [VS Code](nvidia/vscode/)
+- [Set up Tailscale on Your Spark](nvidia/tailscale/)
+- [Vibe Coding in VS Code](nvidia/vibe-coding/)
+
+#### Level 2: Inference
+- [Ollama](nvidia/ollama/) ⭐ *Start here*
+- [Open WebUI with Ollama](nvidia/open-webui/)
+- [vLLM for Inference](nvidia/vllm/)
+- [TRT LLM for Inference](nvidia/trt-llm/) ⚠️ *Requires NGC API Key*
+- [NIM on Spark](nvidia/nim-llm/) ⚠️ *Requires NGC API Key*
+- [SGLang for Inference](nvidia/sglang/) ⚠️ *Requires HF Token*
+- [Nemotron-3-Nano with llama.cpp](nvidia/nemotron/)
+- [Speculative Decoding](nvidia/speculative-decoding/)
+- [NVFP4 Quantization](nvidia/nvfp4-quantization/)
+
+#### Level 3: RAG & Agents
+- [RAG Application in AI Workbench](nvidia/rag-ai-workbench/) ⚠️ *Requires NGC + Tavily Keys*
+- [Text to Knowledge Graph](nvidia/txt2kg/) ⚠️ *Requires API Keys*
+- [Build and Deploy a Multi-Agent Chatbot](nvidia/multi-agent-chatbot/) ⚠️ *Requires API Keys*
+
+#### Level 4: Fine-Tuning
+- [Fine-tune with Pytorch](nvidia/pytorch-fine-tune/) ⚠️ *Requires HF Token*
+- [Unsloth on DGX Spark](nvidia/unsloth/) ⚠️ *Requires HF Token*
+- [LLaMA Factory](nvidia/llama-factory/) ⚠️ *Requires HF Token*
+- [Fine-tune with NeMo](nvidia/nemo-fine-tune/) ⚠️ *Requires HF Token*
+
+#### Level 5: Specialization
+
+**Track A - Image Generation:**
+- [Comfy UI](nvidia/comfy-ui/)
+- [FLUX.1 Dreambooth LoRA Fine-tuning](nvidia/flux-finetuning/) ⚠️ *Requires HF Token*
+
+**Track B - Multi-modal:**
+- [Multi-modal Inference](nvidia/multi-modal-inference/)
+- [Live VLM WebUI](nvidia/live-vlm-webui/)
 - [Build a Video Search and Summarization (VSS) Agent](nvidia/vss/)
+
+**Track C - Robotics:**
+- [Install and Use Isaac Sim and Isaac Lab](nvidia/isaac/)
+
+**Track D - Data Science:**
+- [CUDA-X Data Science](nvidia/cuda-x-data-science/)
+- [Portfolio Optimization](nvidia/portfolio-optimization/)
+- [Single-cell RNA Sequencing](nvidia/single-cell/)
+
+**Track E - Optimization:**
+- [Optimized JAX](nvidia/jax/)
+
+#### Level 6: Multi-Node
+- [Connect Two Sparks](nvidia/connect-two-sparks/) ❌ *Requires 2 Sparks*
+- [NCCL for Two Sparks](nvidia/nccl/) ❌ *Requires 2 Sparks*
 
 ## Required API Keys
 
