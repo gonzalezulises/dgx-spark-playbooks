@@ -9,6 +9,8 @@ Collection of step-by-step playbooks for setting up AI/ML workloads on NVIDIA DG
 
 > **Fork Note**: This is a fork of NVIDIA's official DGX Spark playbooks repository. See custom documentation below for learning paths and integration with Cerebro DS RAG system.
 
+> 🤖 **Claude Code**: Start by reading [PROJECT_STATE.md](PROJECT_STATE.md) for current status and context.
+
 ## About
 
 These playbooks provide detailed instructions for:
@@ -23,7 +25,8 @@ Each playbook includes prerequisites, step-by-step instructions, troubleshooting
 
 | Document | Description |
 |----------|-------------|
-| [🎯 Learning Path](docs/LEARNING-PATH.md) | **Optimal learning order for all 33 playbooks** - 6 progressive levels, specialization tracks, time estimates |
+| [🔄 PROJECT_STATE.md](PROJECT_STATE.md) | **Session continuity contract** - Current status, pending tasks, context for new sessions |
+| [🎯 Learning Path](docs/LEARNING-PATH.md) | **Optimal learning order for all 33 playbooks** - 6 progressive levels, specialization tracks |
 | [📋 Mi Plan de Aprendizaje](docs/MI-PLAN-APRENDIZAJE.md) | **Personal progress tracker** - Dashboard, checkpoints, weekly goals, learning diary |
 | [📊 Cerebro DS Analysis](docs/CEREBRO-DS-ANALYSIS.md) | Comparison of NVIDIA RAG vs Cerebro DS, compatibility analysis, architectural decisions |
 
